@@ -1,0 +1,129 @@
+// Variáveis do LESS
+@card-color: #ffffff;
+@principal-color: #2c3e50;
+@button-color: #27ae60;
+@button-hover: #219150;
+@mobile: ~"(max-width: 720px)";
+
+
+
+
+body {
+    background-image: url(/dinheiro.jpg);
+    background-size: 100% 100%;
+    font-family: "Bebas Neue", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: @card-color;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgb(2, 2, 2);
+    max-width: 600px;
+    width: 100%;
+
+    h1 {
+        color: @principal-color;
+        margin-bottom: 20px;
+        font-size: 48px;
+        text-align: center;
+    }
+
+    .input-group {
+        margin-bottom: 15px;
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+            font-size: 24px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        background-color: @button-color;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 24px;
+        cursor: pointer;
+        transition: background 0.3s;
+        font-family: "Bebas Neue", sans-serif;
+
+
+        &:hover {
+            background-color: @button-hover;
+        }
+    }
+}
+
+.resultado {
+    display: none;
+    margin-top: 5px;
+    padding: 15px;
+    background-color: #eef9f1;
+    border: 4px solid @button-color;
+    border-radius: 4px;
+    font-size: 20px;
+    text-align: center; 
+
+    ul {
+        margin: 15px auto 0 auto;
+        padding-left: 0;           
+        list-style: none;
+        display: inline-block;     
+        text-align: left;          
+
+        li {
+            margin-bottom: 5px;
+        }
+    }
+}
+
+.nota-explicativa {
+    font-size: 15px;
+    color: #555;
+    margin-top: 15px;
+    font-style: italic;
+    font-family: sans-serif; // Fonte simples para garantir a leitura do aviso
+    border-top: 1px dashed #ccc;
+    padding-top: 10px;
+}
+
+@media @mobile{
+    .container{
+        max-width: 80%;
+
+        h1{
+            font-size: 36px;
+        }
+            .input-group{
+                label{
+                    font-size: 20px;
+                }
+            }
+    
+    }
+
+
+}
+
+
+
+
+

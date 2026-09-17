@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Troco</title>
+    <link rel="stylesheet" href="dist/styles/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Troco <i class="bi bi-calculator"></i> </h1>
+        <div class="input-group">
+            <label for="valor-total">Valor total da comprar (R$):</label>
+            <input type="number" id="valor-total" placeholder="Ex: 00,05" step="0.01">
+        </div>
+        <div class="input-group">
+            <label for="valor-pago">Valor pago pelo cliente (R$):</label>
+            <input type="number" id="valor-pago" placeholder="Ex: 00,10" step="0.01">
+        </div>
+        <button id="btn-calcular">Calcular Troco</button>
+        <div id="resultado" class="resultado">
+
+        </div>
+        <div class="nota-explicativa">
+           <strong>Observação :</strong> A nota de R$ 200 não é utilizada por ser pouco comum no dia a dia. O sistema prioriza entregar o menor volume de cédulas e moedas possível, que é a forma mais prática de fornecer o troco quando se tem todas as notas disponíveis.
+        </div>
+    </div>
+
+    <script src="dist/scripts/main.js"></script>
+</body>
+</html>
